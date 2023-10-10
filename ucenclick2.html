@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Učeň click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #score {
+            font-size: 24px;
+        }
+
+        #clicker {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Učeň click</h1>
+    <p id="score">Score: 0</p>
+    <img 
+    width= 300px
+    height= auto
+    id="clicker" src="filipus_minimus.jpg" alt="Píchni mě!">
+
+    <script>
+        let score = 0;
+
+        function updateScore() {
+            score++;
+            document.getElementById('score').innerText = 'Score: ' + score;
+        }
+
+        document.getElementById('clicker').addEventListener('click', updateScore);
+    </script>
+</body>
+</html>
