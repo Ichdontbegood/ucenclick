@@ -27,7 +27,15 @@
     width= 300px
     height= auto
     id="clicker" src="filipus_minimus.jpg" alt="Píchni mě!">
-
+    <audio id="myAudio" src="czechcloud_knaa.mp3"></audio>
+    
+    <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+            var audio = document.getElementById('myAudio');
+            audio.play();
+        });
+    </script>
+    
     <script>
         let score = 0;
 
