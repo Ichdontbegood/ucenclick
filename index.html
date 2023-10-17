@@ -38,13 +38,23 @@
     
     <script>
         let score = 0;
+        const scoreDisplay = document.getElementById('score');
+        const clicker = document.getElementById('clicker');
 
-        function updateScore() {
+        clicker.addEventListener('click', () => {
             score++;
-            document.getElementById('score').innerText = 'Score: ' + score;
-        }
+            scoreDisplay.textContent = `Score: ${score}`;
 
-        document.getElementById('clicker').addEventListener('click', updateScore);
+            // Save score to local storage
+            localStorage.setItem('clickerScore', score);
+        });
+
+        // Load score from local storage
+        const savedScore = localStorage.getItem('clickerScore');
+        if (savedScore) {
+            score = parseInt(savedScore, 10);
+            scoreDisplay.textContent = `Score: ${score}`;
+        }
     </script>
 
 
