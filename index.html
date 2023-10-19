@@ -30,10 +30,10 @@
     <audio id="myAudio" src="uck.mp3"></audio>
     
     <script>
-        document.getElementById('clicker').addEventListener('click', function() {
-            var audio = document.getElementById('myAudio');
-            audio.play();
-        });
+        function playSound() {
+          var audio = new Audio('uck.mp3');
+          audio.play();
+        }
     </script>
     
     <script>
